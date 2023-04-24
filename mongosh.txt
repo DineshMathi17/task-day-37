@@ -31,7 +31,7 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 test> show dbs
 admin    40.00 KiB
 config  108.00 KiB
-dinesh    8.00 KiB
+dinesh   48.00 KiB
 guvi     72.00 KiB
 local    72.00 KiB
 test> use dinesh
@@ -905,7 +905,7 @@ dinesh> db.productData.find({"product_material": "Soft"})
     product_color: 'azure'
   }
 ]
-dinesh> db.productData.find({ $and :[{"product_color": "indigo"},{"product_price":492}]})
+dinesh> db.productData.find({ $and :[{"product_color": "indigo"},{"product_price":492.00}]})
 
 dinesh> db.productData.deleteMany({$and:[{"product_price":47},{"product_price":36}]})
 { acknowledged: true, deletedCount: 2 }
